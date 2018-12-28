@@ -17,3 +17,4 @@ fb/fb_spiders/logs/**
 *.ipynb
 newsscrappers/cronlogs/*
 */static/*
+*/media/*
