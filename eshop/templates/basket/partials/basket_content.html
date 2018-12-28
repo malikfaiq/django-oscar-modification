@@ -61,9 +61,6 @@
                             {% if user.is_staff %}
                                 <a href="javascript:;" class="shwbtn">Modification</a>
                                 <div class="shwdtl" style="display: none">
-                                    <form action="{% url  %}" method="POST">
-                                        <input id="submit" type="button" value="Click" />
-                                    </form>
                                     <span class="label label-default">Title</span> {{ form.title }}
                                     <span class="label label-default">Price</span> {{ form.price }}
                                     <span class="label label-default">Comments</span> </br>{{ form.comments}}
