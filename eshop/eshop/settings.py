@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'compressor',
     'widget_tweaks',
     'address',
+    'basket',
     'checkout'
-] + get_core_apps(get_core_apps())
+] + get_core_apps([''])
 
 SITE_ID = 1
 
@@ -68,8 +69,14 @@ AUTHENTICATION_BACKENDS = (
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-
 ROOT_URLCONF = 'eshop.urls'
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
+print(os.path.join(BASE_DIR, 'templates'))
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 TEMPLATES = [
     {
